@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CarController;
 
 Route::get('/', function () {
     Log::info('Welcome page visited');
@@ -70,3 +71,4 @@ Route::get('/health', function () {
 });
 
 Route::resource('books', BookController::class);
+Route::resource('cars', CarController::class);
